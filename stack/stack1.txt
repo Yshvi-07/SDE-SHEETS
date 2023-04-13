@@ -1,0 +1,27 @@
+
+
+void solve(stack<int>&s,int n){
+    if(s.empty()){
+        s.push(n);
+        return;
+    }
+    int nu=s.top();
+    s.pop();
+    solve(s,n);
+    s.push(nu);
+}
+
+
+
+
+
+void reverseStack(stack<int> &stack) {
+    // Write your code here
+    if(stack.empty()){
+        return;
+    }
+    int nu=stack.top();
+    stack.pop();
+    reverseStack(stack);
+    solve(stack,nu);
+}
