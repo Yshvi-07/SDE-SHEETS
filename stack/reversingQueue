@@ -1,0 +1,19 @@
+queue<int> rev(queue<int> q)
+{
+    // add code here.
+    stack<int>s;
+    queue<int>qt;
+    int front=-1,rear=-1;
+    while(!q.empty()){
+        int e=q.front();
+        q.pop();
+        s.push(e);
+    }
+    while(!s.empty()){
+        int d=s.top();
+        s.pop();
+        qt.push(d);
+    }
+    return qt;
+    
+}
