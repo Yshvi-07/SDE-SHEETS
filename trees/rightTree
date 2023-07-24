@@ -1,0 +1,19 @@
+class Solution
+{
+    public:
+    void dfs(Node* root, int i, vector<int> &ans)
+    {
+        if(!root) return;
+        if(ans.size() == i) ans.push_back(root->data);
+        
+        dfs(root->right, i+1, ans);
+        dfs(root->left, i+1, ans);
+    }
+    vector<int> rightView(Node *root)
+    {
+       vector<int> ans;
+       int i = 0;
+       dfs(root, i, ans);
+       return ans;
+    }
+};
