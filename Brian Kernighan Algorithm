@@ -1,0 +1,24 @@
+Brian Kernighan’s Algorithm : This algorithm mailnluy used to determine the set bits of a number . It mainly focuses on the set bits and leav the zeros .
+Code for this algorithm is stated below
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Hello World";
+
+    
+    int n;
+    cin>>n;
+    int c=0;
+    while(n){
+        //int d=0;
+        n=n&(n-1);
+        
+            c++;
+        
+     }
+     cout<<c<<endl;
+     return 0;
+}
