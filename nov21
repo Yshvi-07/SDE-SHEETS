@@ -1,0 +1,22 @@
+class Solution
+{
+    public:
+    //Function to check if two trees are identical.
+    bool isIdentical(Node *r1, Node *r2)
+    {
+        string s1,s2;
+        inorder(r1,s1);
+        inorder(r2,s2);
+        return s1==s2;
+    }
+    
+    void inorder(Node* root,string &s){
+        if(root == NULL){
+            s.push_back('N');
+            return;
+        }
+        s.push_back(root->data + '0');
+        inorder(root->left,s);
+        inorder(root->right,s);
+    }
+};
